@@ -19,8 +19,12 @@ generate_top_pos_plot <- function(text_df, pos, title) {
     labs(y = "Frequency", x = NULL, title = title) +
     coord_flip() +
     theme_minimal() +
-    theme(panel.grid.major.y = element_blank())+ 
-    guides(fill = FALSE)  
+    theme(
+      panel.grid.major.y = element_blank(),
+      axis.text.y = element_text(size = 16),  # Adjust the font size as needed
+      axis.title = element_text(size = 12)    # Adjust the font size as needed
+    ) +
+    guides(fill = FALSE)
 }
 
 generate_wordcloud <- function(text_df, stopwords, min_freq = 30, scale_range = c(5, 0.5), color_palette = brewer.pal(6, "Dark2"), rotate_ratio = 0.2) {

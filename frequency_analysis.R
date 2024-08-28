@@ -19,10 +19,10 @@ calculate_frequency_and_plot <- function(text_df) {
   
   # Expect a warning about rows with missing values being removed
   plot <- ggplot(frequency, aes(x = proportion, y = `Set1`, 
-                        color = abs(`Set1` - proportion))) +
+                                color = abs(`Set1` - proportion))) +
     geom_abline(color = "gray40", lty = 2) +
     geom_jitter(alpha = 0.1, size = 2.5, width = 0.3, height = 0.3) +
-    geom_text(aes(label = token), check_overlap = TRUE, vjust = 1.5) +
+    geom_text(aes(label = token), check_overlap = TRUE, vjust = 1.5, size = 4) + 
     scale_x_log10(labels = percent_format()) +
     scale_y_log10(labels = percent_format()) +
     scale_color_gradient(limits = c(0, 0.001), 
@@ -30,6 +30,7 @@ calculate_frequency_and_plot <- function(text_df) {
     facet_wrap(~origin, ncol = 2) +
     theme(legend.position = "none") +
     labs(y = "Set1", x = NULL)
+  
   return(list(freq = frequency, plot = plot))
 }
 

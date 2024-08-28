@@ -25,7 +25,12 @@ plot_top_terms <- function(top_terms) {
     ggplot(aes(beta, term, fill = factor(topic))) +
     geom_col(show.legend = FALSE) +
     facet_wrap(~ topic, scales = "free") +
-    scale_y_reordered()
+    scale_y_reordered()+ 
+    theme(
+      panel.grid.major.y = element_blank(),
+      axis.text.y = element_text(size = 14),  # Adjust the font size as needed
+      
+    ) 
 }
 
 # Function to get document-topic matrix

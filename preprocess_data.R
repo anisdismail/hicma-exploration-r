@@ -8,7 +8,7 @@ library(Matrix)
 
 # Function to download and load Arabic UDpipe model
 load_arabic_udpipe_model <- function() {
-  udpipe::udpipe_download_model(language = "arabic-padt")
+  #udpipe::udpipe_download_model(language = "arabic-padt")
   return(udpipe::udpipe_load_model(file = "arabic-padt-ud-2.5-191206.udpipe"))
 }
 

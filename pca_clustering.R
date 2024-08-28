@@ -1,4 +1,3 @@
-# Assuming you are using the 'tm' and 'stats' packages
 library(tm)
 library(stats)
 library(factoextra)
@@ -15,8 +14,9 @@ cluster_terms <- function(mat, lowfreq = 50, highfreq_ratio = 0.9, num_clusters 
   # Calculate distance and perform hierarchical clustering
   d <- dist(t(mat_filtered), method = "euclidean")
   fit <- hclust(d = d, method = "complete")
-  
+	
   # Plot and return clusters
+  dev.new()
   plot(fit)
   rect.hclust(fit, k = num_clusters)
   return(fit)
@@ -32,10 +32,7 @@ perform_pca_documents <- function(mat, lowfreq = 50, highfreq_ratio = 0.9) {
   mat_filtered <- mat_filtered[raw.sum != 0, ]
   d <- dist(mat_filtered, method = "euclidean")
   data <- scale(1 - d)
-  pca_result <- prcomp(data)
-  
-  fviz_eig(pca_result, addlabels = TRUE)
-  
+  pca_result <- prcomp(data)  
   return(pca_result)
 }
 
@@ -45,7 +42,7 @@ plot_pca_2d <- function(pca_result, x_limits, y_limits) {
   unique_labels <- unique(labels)
   label_colors <- rainbow(length(unique_labels))
   point_colors <- label_colors[match(labels, unique_labels)]
-  
+  dev.new()
   ggplot(data.frame(PC1 = jitter(pca_result$x[, 1], 0.2),
                     PC2 = jitter(pca_result$x[, 2], 0.2),
                     Label = labels), 
@@ -71,17 +68,15 @@ perform_pca_words <- function(mat, lowfreq = 50, highfreq_ratio = 0.9) {
   data <- scale(1 - d)
   pca_result <- prcomp(data)
   
-  plot(fviz_eig(pca_result, addlabels = TRUE))
-  
-  plot(fviz_pca_var(pca_result, col.var = "cos2",
-               gradient.cols = c("black", "orange", "green"),
-               repel = TRUE))
   
   plot(fviz_pca_ind(pca_result,
                col.ind = "cos2",
                gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
                repel = TRUE
   ))
+  dev.new()
+  plot(fviz_eig(pca_result, addlabels = TRUE))
+
   return(pca_result)
 }
 

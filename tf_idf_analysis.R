@@ -27,7 +27,12 @@ create_tf_idf_plot <- function(doc_tf_idf, top_n = 15) {
     ggplot(aes(tf_idf, fct_reorder(token, tf_idf), fill = origin)) +
     geom_col(show.legend = FALSE) +
     facet_wrap(~origin, ncol = 2, scales = "free") +
-    labs(x = "tf-idf", y = NULL)
+    labs(x = "tf-idf", y = NULL)+
+    theme(
+      panel.grid.major.y = element_blank(),
+      axis.text.y = element_text(size = 14),  # Adjust the font size as needed
+      
+    ) 
   
   return(plot)
 }

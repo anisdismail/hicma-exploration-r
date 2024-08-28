@@ -63,7 +63,12 @@ generate_ngram_tf_idf_plot <- function(data,arabic_stopwords, n = 2, top_n = 15)
   ggplot(top_ngrams, aes(tf_idf, fct_reorder(ngram_column, tf_idf), fill = origin)) +
     geom_col(show.legend = FALSE) +
     facet_wrap(~origin, ncol = 2, scales = "free") +
-    labs(x = "tf-idf", y = NULL)
+    labs(x = "tf-idf", y = NULL)+   
+    theme(
+      panel.grid.major.y = element_blank(),
+      axis.text.y = element_text(size = 14),  # Adjust the font size as needed
+      
+    ) 
 }
 
 

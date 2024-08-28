@@ -15,7 +15,7 @@ create_freq_by_rank <- function(doc_words) {
 # Function to create the initial plot
 create_initial_plot <- function(freq_by_rank) {
   ggplot(freq_by_rank, aes(rank, `term frequency`, color = origin)) + 
-    geom_line(size = 1.1, alpha = 0.8, show.legend = FALSE) + 
+    geom_line(size = 1.1, alpha = 0.8, show.legend = TRUE) + 
     scale_x_log10() +
     scale_y_log10()
 }
@@ -31,7 +31,7 @@ add_regression_line <- function(freq_by_rank, subset_start = 10, subset_end = 50
   plot <- ggplot(freq_by_rank, aes(rank, `term frequency`, color = origin)) + 
     geom_abline(intercept = coef(regression_line)[1], slope = coef(regression_line)[2], 
                 color = "gray50", linetype = 2) +
-    geom_line(size = 1.1, alpha = 0.8, show.legend = FALSE) + 
+    geom_line(size = 1.1, alpha = 0.8, show.legend = TRUE) + 
     scale_x_log10() +
     scale_y_log10()
   
