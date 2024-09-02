@@ -112,5 +112,5 @@ The code used in this project is licensed under the MIT License, see [here](http
 [stars-url]: https://github.com/anisdismail/hicma-exploration-r/stargazers
 [issues-shield]: https://img.shields.io/github/issues/anisdismail/hicma-exploration-r.svg?style=for-the-badge
 [issues-url]: https://github.com/anisdismail/hicma-exploration-r/issues
-[license-shield]: https://img.shields.io/badge/license-MITupdat-green?style=for-the-badge
+[license-shield]: https://img.shields.io/badge/license-MIT-green?style=for-the-badge
 [license-url]: https://github.com/anisdismail/hicma-exploration-r/LICENSE
