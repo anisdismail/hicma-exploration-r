@@ -13,7 +13,8 @@ Curious about exploring the HICMA dataset, and not sure where to start?
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <a href="#built-with">Built With</a>
+      </li>
+     <li> <a href="#built-with">Built With</a>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -104,13 +105,13 @@ The code used in this project is liscenced under the MIT License, see [here](htt
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/anisdismail/HICMA-benchmark.svg?style=for-the-badge
-[contributors-url]: https://github.com/anisdismail/HICMA-benchmark/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/anisdismail/HICMA-benchmark.svg?style=for-the-badge
-[forks-url]: https://github.com/anisdismail/HICMA-benchmark/network/members
-[stars-shield]: https://img.shields.io/github/stars/anisdismail/HICMA-benchmark.svg?style=for-the-badge
-[stars-url]: https://github.com/anisdismail/HICMA-benchmark/stargazers
-[issues-shield]: https://img.shields.io/github/issues/anisdismail/HICMA-benchmark.svg?style=for-the-badge
-[issues-url]: https://github.com/anisdismail/HICMA-benchmark/issues
+[contributors-shield]: https://img.shields.io/github/contributors/anisdismail/hicma-exploration-r.svg?style=for-the-badge
+[contributors-url]: https://github.com/anisdismail/hicma-exploration-r/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/anisdismail/hicma-exploration-r.svg?style=for-the-badge
+[forks-url]: https://github.com/anisdismail/hicma-exploration-r/network/members
+[stars-shield]: https://img.shields.io/github/stars/anisdismail/hicma-exploration-r.svg?style=for-the-badge
+[stars-url]: https://github.com/anisdismail/hicma-exploration-r/stargazers
+[issues-shield]: https://img.shields.io/github/issues/anisdismail/hicma-exploration-r.svg?style=for-the-badge
+[issues-url]: https://github.com/anisdismail/hicma-exploration-r/issues
 [license-shield]: https://img.shields.io/badge/license-CC--BY--NC--4.0-green?style=for-the-badge
-[license-url]: https://github.com/anisdismail/HICMA-benchmark/LICENSE
+[license-url]: https://github.com/anisdismail/hicma-exploration-r/LICENSE
