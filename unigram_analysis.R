@@ -1,9 +1,8 @@
-# Load necessary libraries
 library(dplyr)
 library(tidyr)
 library(ggplot2)
-library(forcats)  # Ensure forcats library is loaded for fct_reorder function
-library(widyr)    # Ensure widyr library is loaded for bind_tf_idf function
+library(forcats)  
+library(widyr)    
 library(ggraph)
 library(igraph)
 
