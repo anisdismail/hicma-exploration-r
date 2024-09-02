@@ -11,7 +11,7 @@
 #####################################################################################################
 
 # Set the working directory and load necessary functions
-setwd('C:/Users/anisi/Downloads/stats-data')
+setwd('/hicma-exploration-r')
 source("load_data.R")
 source("preprocess_data.R")
 source("visualization.R")

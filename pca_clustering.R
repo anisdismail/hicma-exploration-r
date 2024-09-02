@@ -16,7 +16,6 @@ cluster_terms <- function(mat, lowfreq = 50, highfreq_ratio = 0.9, num_clusters 
   fit <- hclust(d = d, method = "complete")
 	
   # Plot and return clusters
-  dev.new()
   plot(fit)
   rect.hclust(fit, k = num_clusters)
   return(fit)
@@ -74,8 +73,6 @@ perform_pca_words <- function(mat, lowfreq = 50, highfreq_ratio = 0.9) {
                gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
                repel = TRUE
   ))
-  dev.new()
-  plot(fviz_eig(pca_result, addlabels = TRUE))
 
   return(pca_result)
 }
